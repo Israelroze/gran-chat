@@ -22,8 +22,9 @@ def prompt_and_send(url, username):
     MESSAGE_CACHE = []
     get_and_print(url)
 
-    ter_status = input("Close the Session (Y/N)?")
-    return False if ter_status.lower() == 'n' else True
+    #ter_status = input("Close the Session (Y/N)?")
+    #return False if ter_status.lower() == 'n' else True
+    return None
 
 
 def get_and_print(url):
@@ -38,8 +39,8 @@ def get_and_print(url):
 if __name__ == '__main__':
     args = parser.parse_args()
     server_url = f"http://{args.target}:{args.port}/chat"
-    terminate = False
-    while not terminate:
+    #terminate = False
+    while True:
         try:
             get_and_print(server_url)
             time.sleep(1)
