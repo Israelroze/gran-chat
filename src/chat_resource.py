@@ -11,7 +11,14 @@ class Messages(Resource):
         return _message
 
     def post(self):
-        msg = request.get_json()
+        msg = request.json
+
         logger.info('got message' + str(msg))
-        _message.append(msg)
-        return 'message added', 201
+
+        # check if username provided
+        if 'username' in msg and msg['username'] != "":
+            _message.append(request.json)
+            return 'message added', 201
+        else:
+            return 'username required', 400
+
