@@ -5,10 +5,9 @@ FROM python:3.8.2-slim
 WORKDIR /app
 
 # copy the project content into workdir
-COPY ./server /app
+COPY ./client /app
 
 # install dependencies
 RUN pip install -r requirments.txt
 
-# run the server
-CMD ["python","run.py"]
+

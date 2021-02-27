@@ -14,5 +14,12 @@ gran-chat -> server -> Dockerfile
     |*IP*:*Port*/chat      | GET  |  None | Get all messages
 
 ## Running the Chat Client
+To run the client, please execute the run.py under the client image with the following arguments:
 
-    TBD
+"--username" your user name
+
+"--target" the IP address of the server (OPTIONAL, default is 127.0.0.1)
+
+"--port" the listening port of the server (OPTIONAL, default is 5000) 
+
+The client will print all the message in the chat, to add a message press ctrl+c on the keyboard
