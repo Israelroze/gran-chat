@@ -1,10 +1,10 @@
 import traceback
 from flask import Flask
 from cheroot.wsgi import Server
-from src.routes import routes
+from server.src.routes import routes
 from logging import getLogger
 from flask_restful import Api
-from src.chat_resource import Messages
+from server.src.chat_resource import Messages
 
 app = Flask(__name__)
 

@@ -5,7 +5,7 @@ FROM python:3.8.2-slim
 WORKDIR /gran-chat
 
 # copy the project content into workdir
-COPY . /gran-chat
+COPY .. /gran-chat
 
 # install dependencies
 RUN pip install -r requirments.txt
